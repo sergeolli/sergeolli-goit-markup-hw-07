@@ -951,9 +951,6 @@ ul {
   border-radius: 4px;
   min-width: auto;
   border: 0px;
-}
-
-.filter__button {
   color: var(--title-text-color);
   background-color: #f5f4fa;
   font-family: Roboto;
