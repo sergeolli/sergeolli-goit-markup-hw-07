@@ -11,7 +11,7 @@ ul {
   padding: 0;
   margin: 0;
 }
-.link {
+a {
   text-decoration: none;
 }
 img {
@@ -40,11 +40,14 @@ ul {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  &.no-padding {
-    padding-bottom: 0;
-  }
 }
 
+.section__no-padding {
+  padding-bottom: 0;
+}
+.section__team-color {
+  background-color: #f5f4fa;
+}
 .section__title {
   margin-bottom: 50px;
 

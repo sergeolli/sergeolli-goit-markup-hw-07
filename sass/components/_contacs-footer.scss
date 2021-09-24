@@ -5,11 +5,11 @@
 
 .contacs-footer__item {
   margin-top: 9px;
-  &.no-margin {
-    margin-top: 0;
-  }
 }
 
+.contacs-footer__item__no-margin {
+  margin-top: 0;
+}
 .contacs-footer__actual-address {
   color: var(--primary-white-color);
 }
@@ -23,8 +23,4 @@
   &:focus {
     color: var(--accent-color);
   }
-}
-
-.address-footer {
-  flex-grow: 1;
 }

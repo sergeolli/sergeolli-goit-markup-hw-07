@@ -1,8 +1,3 @@
-.main-nav {
-  display: flex;
-  align-items: center;
-}
-
 .site-nav {
   display: flex;
   margin-left: 93px;
@@ -30,12 +25,11 @@
   &:focus {
     color: var(--accent-color);
   }
-  &.current {
-    color: var(--accent-color);
-  }
 }
 
-.current {
+.site-nav__link__current {
+  color: var(--accent-color);
+
   &::after {
     content: "";
     display: block;

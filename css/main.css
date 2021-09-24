@@ -22,7 +22,7 @@ ul {
   margin: 0;
 }
 
-.link {
+a {
   text-decoration: none;
 }
 
@@ -56,8 +56,12 @@ ul {
   padding-bottom: 94px;
 }
 
-.section.no-padding {
+.section__no-padding {
   padding-bottom: 0;
+}
+
+.section__team-color {
+  background-color: #f5f4fa;
 }
 
 .section__title {
@@ -69,7 +73,18 @@ ul {
   text-align: center;
 }
 
-.visually-hidden {
+.section__title__visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.checkbox__input__visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -82,6 +97,21 @@ ul {
 
 .page-header {
   border-bottom: 1px solid #ececec;
+}
+
+.page-header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-footer__address {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .logo {
@@ -99,15 +129,6 @@ ul {
 
 .logo__accen-footert {
   color: var(--primary-white-color);
-}
-
-.main-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .site-nav {
@@ -138,11 +159,11 @@ ul {
   color: var(--accent-color);
 }
 
-.site-nav__link.current {
+.site-nav__link__current {
   color: var(--accent-color);
 }
 
-.current::after {
+.site-nav__link__current::after {
   content: "";
   display: block;
   position: absolute;
@@ -335,10 +356,6 @@ ul {
   bottom: 0;
 }
 
-.team-color {
-  background-color: #f5f4fa;
-}
-
 .team {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -361,26 +378,26 @@ ul {
   background-color: #ffffff;
 }
 
-.team-member {
+.team__box {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.team-member__name {
+.team__title {
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
 }
 
-.team-member__position {
+.team__text {
   margin-top: 10px;
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.18;
 }
 
-.team-member__social-networks {
+.social-networks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -390,7 +407,11 @@ ul {
   margin-top: 16px;
 }
 
-.team-member__link {
+.social-networks__item:nth-child(n + 2) {
+  margin-left: 10px;
+}
+
+.social-networks__link {
   color: #afb1b8;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -408,19 +429,15 @@ ul {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-member__link:hover, .team-member__link:focus {
+.social-networks__link:hover, .social-networks__link:focus {
   background-color: var(--accent-color);
   color: #ffffff;
 }
 
-.team-member__icon {
+.social-networks__icon {
   width: 20px;
   height: 20px;
   fill: currentColor;
-}
-
-.team-member__item:nth-child(n + 2) {
-  margin-left: 10px;
 }
 
 .clients {
@@ -472,6 +489,15 @@ ul {
   background-color: #2f303a;
 }
 
+.page-footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
 .contacs-footer {
   font-style: normal;
   margin-top: 20px;
@@ -481,7 +507,7 @@ ul {
   margin-top: 9px;
 }
 
-.contacs-footer__item.no-margin {
+.contacs-footer__item__no-margin {
   margin-top: 0;
 }
 
@@ -497,21 +523,6 @@ ul {
 
 .contacs-footer__link:hover, .contacs-footer__link:focus {
   color: var(--accent-color);
-}
-
-.address-footer {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-.footer-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
 }
 
 .socials {
@@ -672,7 +683,7 @@ ul {
   transition: opacity 250ms;
 }
 
-.backdrop.is-hidden {
+.backdrop__is-hidden {
   opacity: 0;
   pointer-events: none;
 }
@@ -734,7 +745,7 @@ ul {
   margin-bottom: 10px;
 }
 
-.textarea {
+.modal-form__group__more-margin {
   margin-bottom: 20px;
 }
 
